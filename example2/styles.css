@@ -1,0 +1,90 @@
+/* --------------------------------- */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  #board {
+    margin: 35px 0;
+  }
+  
+  /* .container {
+    width: 100%;
+    line-height: 1.3;
+    background: light-grey;
+    content: 'OKOKO';
+  } */
+  
+  ol.even {
+    width: 90%;
+    position: relative;
+    left: 2.6087em;
+    margin-top: -1.5em;
+  }
+  
+  ol.odd {
+    width: 90%;
+    position: relative;
+    margin-top: -3.75em;
+    margin-bottom: -2.73em;
+  }
+  
+  .hex {
+    position: relative;
+    margin: 1em auto;
+    width: 3em;
+    height: 5.1em;
+    border-radius: 1em/.3em;
+    background: #ccc;
+    transform: rotate(-90deg);
+    display: inline-block;
+    margin-right: 2.27273em;
+    transition: all 250ms ease-in-out;
+  }
+  
+  .hex:before, .hex:after {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: inherit;
+    content: '';
+  }
+  
+  .hex:before {
+    transform: rotate(60deg);
+  }
+  
+  .hex:after {
+    transform: rotate(-60deg);
+  }
+  
+  .hex:hover {
+    background: #F58787;
+    cursor: pointer;
+  }
+  
+  .hex.beard {
+    background: #FF00FF;
+  }
+
+  .hex.player1 {
+    background: #FF0000;
+  }
+
+  .hex.player2 {
+    background: #0000FF;
+  }
+
+  .hex.sibling {
+    background: #AA0000;
+  }
+
+  .text{
+    position: absolute;
+  z-index: 1000;
+  transform: rotate(90deg);
+  margin-top: 30px;
+  margin-left: 10px;
+}

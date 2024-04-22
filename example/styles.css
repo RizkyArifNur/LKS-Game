@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.hex-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 5px;
+    transform: rotate(-30deg) scaleY(0.866);
+}
+
+.hex {
+    width: 100px;
+    height: 115px;
+    background-color: #ccc;
+    position: relative;
+    text-align: center;
+    line-height: 115px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.hex:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 57.5px solid #ccc;
+}
